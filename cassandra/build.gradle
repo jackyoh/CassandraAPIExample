@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+eclipse {
+  jdt {
+     sourceCompatibility = 1.7
+     targetCompatibility = 1.7
+  }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://central.maven.org/maven2"
+    }
+}
+
+dependencies {
+    compile 'org.apache.cassandra:cassandra-clientutil:3.3'
+	compile 'org.apache.cassandra:cassandra-thrift:3.3'
+}
